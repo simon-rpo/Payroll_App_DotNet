@@ -12,6 +12,9 @@ namespace Payroll.Dal
     {
 
         #region Props & Vars
+        /// <summary>
+        /// Context for service 
+        /// </summary>
         public readonly string RestClient;
         #endregion
 
@@ -23,6 +26,10 @@ namespace Payroll.Dal
         #endregion
 
         #region Public Methods
+        /// <summary>
+        /// Get all the employees
+        /// </summary>
+        /// <returns>List<EmployeeDto></returns>
         public async Task<List<EmployeeDto>> GetEmployeeData()
         {
             try

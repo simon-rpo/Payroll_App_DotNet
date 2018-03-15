@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Payroll App </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link href="~/Content/css/styles.css" rel="stylesheet" />
+    <link href="~/Content/vendor/bootstrap/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="~/Content/css/animate.css" rel="stylesheet" />
+
+    <!--Icon-->
+    <link rel="shortcut icon" type='image/x-icon' href="~/Content/img/Renualt_logo.ico" />
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- Scripts -->
+    <script src="~/Content/scripts/Utils/Urls/Urls.js"></script>
+    <script src="~/Content/vendor/jquery/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/scripts/Utils/Plugins/bootstrap-notify.js"></script>
+    <script src="~/Content/scripts/Utils/Plugins/jquery.translate.js"></script>
+    <script src="~/Content/scripts/Utils/Generic/Generic.js"></script>
+    <script src="~/Content/scripts/Utils/Generic/Messages.js"></script>
+    <script src="~/Content/scripts/Utils/Plugins/attrchange.js"></script>
+    <script src="~/Content/scripts/Payroll/Payroll.js"></script>
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div id="topBar" class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <div class="row page-scroll" style="display: -webkit-flex; display: flex;">
+                    <div style="-webkit-flex: 1; flex: 1; width:80%; min-width: 100px;">
+                        <a class="navbar-brand trn nav-home" data-trn-key="PAYROLL" style="float: left; "></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-10 col-sm-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="float: right; margin-left: 10px">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                </ul>
+            </div>
+            <!--.navbar-collapse -->
+        </div>
+        <!--.container-fluid -->
+    </nav>
+    <!--.Navigation -->
+    <!--Body container-->
+    <section class="grid">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </section>
+    <!--.Body container-->
+    <!--Message-->
+    <div class="GlobalMessage Disable" id="GolbalMessage">
+        <div class="row">
+            <div class="col-sm-12">
+                <label id="lblMessageTitle"></label>
+            </div>
+            <br />
+            <div class="col-sm-12">
+                <label id="lblMessageContainer"></label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

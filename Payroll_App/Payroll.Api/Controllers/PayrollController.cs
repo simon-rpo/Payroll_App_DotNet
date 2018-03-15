@@ -15,6 +15,9 @@ namespace ExtranetSofasa.VolumenBonusVN.Api.Controllers
     public class PayrollController : ApiController
     {
         #region Properties
+        /// <summary>
+        /// Payroll Business rules injection
+        /// </summary>
         private readonly IPayrollRules PayrollRules;
         #endregion
 
@@ -26,7 +29,11 @@ namespace ExtranetSofasa.VolumenBonusVN.Api.Controllers
         #endregion
 
         #region API
-
+        /// <summary>
+        /// Api that returns a list of employees with Annual Salary Calculated.
+        /// </summary>
+        /// <param name="lEmployees"></param>
+        /// <returns>HttpResponseMessage</returns>
         [Route("api/Payroll/GetEmployeeAnnualSalary")]
         [HttpPost]
         public async Task<HttpResponseMessage> GetEmployeeAnnualSalary(List<EmployeeDto> lEmployees)

@@ -24,13 +24,20 @@ namespace Payroll.MiddleWare
             return Configuration;
         }
 
-        #region Metodos Privados
-
+        #region Private Methods
+        /// <summary>
+        /// Registry Data access layer for injection(autofac)
+        /// </summary>
+        /// <param name="builder"></param>
         private static void DataAccessLayer(ref ContainerBuilder builder)
         {
             builder.RegisterType<EmployeeDal>().As<IEmployeeDal>();
         }
 
+        /// <summary>
+        /// registry Rules(Business Rules layer) for injection
+        /// </summary>
+        /// <param name="builder"></param>
         private static void Rules(ref ContainerBuilder builder)
         {
             builder.RegisterType<EmployeeRules>().As<IEmployeeRules>();
