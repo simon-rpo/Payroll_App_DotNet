@@ -3,8 +3,6 @@ $(function ($) {
   Payroll.Init();
 });
 
-var UserData = [];
-
 var Payroll = {
   Init: function () {
 
